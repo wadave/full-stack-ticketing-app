@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ticket-1001",
+    "title": "Cannot reset password",
+    "description": "Customer reports that the password reset email never arrives.",
+    "customerEmail": "morgan@example.com",
+    "priority": "high",
+    "status": "open",
+    "createdAt": "2026-05-20T16:10:00.000Z",
+    "updatedAt": "2026-05-27T18:30:00.000Z"
+  },
+  {
+    "id": "ticket-1002",
+    "title": "Invoice download shows blank page",
+    "description": "The billing page opens, but the generated invoice PDF is empty.",
+    "customerEmail": "avery@example.com",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2026-05-23T09:45:00.000Z",
+    "updatedAt": "2026-05-26T21:15:00.000Z"
+  },
+  {
+    "id": "ticket-1003",
+    "title": "Typo in onboarding checklist",
+    "description": "The final onboarding step says 'submited' instead of 'submitted'.",
+    "customerEmail": "riley@example.com",
+    "priority": "low",
+    "status": "closed",
+    "createdAt": "2026-05-21T14:20:00.000Z",
+    "updatedAt": "2026-05-24T11:05:00.000Z"
+  },
+  {
+    "id": "05d87c81-561b-4451-af34-7769c5e7371c",
+    "title": "test",
+    "description": "there's an issue for",
+    "customerEmail": "dave@gmail.com",
+    "priority": "medium",
+    "status": "open",
+    "createdAt": "2026-05-28T04:25:45.291Z",
+    "updatedAt": "2026-05-28T04:25:45.291Z"
+  }
+]

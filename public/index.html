@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Support Desk</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="workspace" aria-label="Support ticket workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Practice Support Desk</p>
+            <h1>Ticket queue</h1>
+          </div>
+          <div class="metrics" aria-label="Ticket summary">
+            <span><strong id="totalCount">0</strong> total</span>
+            <span><strong id="openCount">0</strong> open</span>
+          </div>
+        </header>
+
+        <section class="toolbar" aria-label="Ticket filters">
+          <label class="search">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="Title, customer, description">
+          </label>
+          <div class="status-tabs" role="tablist" aria-label="Filter by status">
+            <button class="tab is-active" type="button" data-status="">All</button>
+            <button class="tab" type="button" data-status="open">Open</button>
+            <button class="tab" type="button" data-status="pending">Pending</button>
+            <button class="tab" type="button" data-status="closed">Closed</button>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <form class="ticket-form" id="ticketForm">
+            <div class="section-heading">
+              <h2>Create ticket</h2>
+              <p id="formStatus" role="status"></p>
+            </div>
+
+            <label>
+              <span>Title</span>
+              <input name="title" type="text" placeholder="Short issue summary" required>
+            </label>
+
+            <label>
+              <span>Customer email</span>
+              <input name="customerEmail" type="email" placeholder="customer@example.com" required>
+            </label>
+
+            <label>
+              <span>Priority</span>
+              <select name="priority" required>
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Description</span>
+              <textarea name="description" rows="6" placeholder="What happened, and what did the customer expect?" required></textarea>
+            </label>
+
+            <button class="primary-action" type="submit">Create ticket</button>
+          </form>
+
+          <section class="ticket-panel" aria-label="Tickets">
+            <div class="section-heading">
+              <h2>Queue</h2>
+              <button class="ghost-action" id="refreshButton" type="button">Refresh</button>
+            </div>
+            <div class="ticket-list" id="ticketList"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <template id="ticketTemplate">
+      <article class="ticket-card">
+        <div class="ticket-card__main">
+          <div class="ticket-card__title-row">
+            <h3></h3>
+            <span class="priority-pill"></span>
+          </div>
+          <p class="ticket-card__description"></p>
+          <dl class="ticket-meta">
+            <div>
+              <dt>Customer</dt>
+              <dd data-field="customerEmail"></dd>
+            </div>
+            <div>
+              <dt>Updated</dt>
+              <dd data-field="updatedAt"></dd>
+            </div>
+          </dl>
+        </div>
+        <label class="status-select">
+          <span>Status</span>
+          <select data-field="status">
+            <option value="open">Open</option>
+            <option value="pending">Pending</option>
+            <option value="closed">Closed</option>
+          </select>
+        </label>
+      </article>
+    </template>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

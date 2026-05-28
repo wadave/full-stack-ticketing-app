@@ -1,0 +1,16 @@
+{
+  "name": "support-ticket-practice-app",
+  "version": "1.0.0",
+  "description": "A small full-stack support ticket app for Codex interview practice.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "codex",
+    "interview",
+    "support-tickets"
+  ],
+  "license": "MIT"
+}
